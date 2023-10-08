@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom/cjs/react-router-dom.min';
 import SignupPage from './Pages/Signup';
+import LoginPage from './Pages/Login';
 
 
 /**
@@ -18,6 +19,9 @@ function App() {
       </Route>
       <Route path="/signup">
       <SignupPage />
+      </Route>
+      <Route path="/login">
+      <LoginPage />
       </Route>
       </Router>
     </div>

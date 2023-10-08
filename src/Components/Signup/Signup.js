@@ -2,9 +2,11 @@ import React, { useState, useContext } from 'react';
 import Logo from '../../olx-logo.png';
 import './Signup.css';
 import { FireBaseContext } from '../../store/CreateContext';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Signup() {
 
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -20,6 +22,8 @@ const {Firebase} = useContext(FireBaseContext)
           id: res.user.uid,
           username: username,
           phone: phone
+        }).then(() => {
+          history.push("/login")
         })
       })
     })
