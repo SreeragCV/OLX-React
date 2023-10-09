@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { FireBaseContext } from '../../store/CreateContext';
 import Logo from '../../olx-logo.png';
 import './Login.css';
-import { Firebase } from '../../firebase/config';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 function Login() {
@@ -20,6 +19,10 @@ function Login() {
     }
   )}
 
+  const signUpPage = (e) => {
+    e.preventDefault();
+    history.push("/signup")
+  }
 
   return (
     <div>
@@ -51,7 +54,7 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <button onClick={signUpPage}>Signup</button>
       </div>
     </div>
   );

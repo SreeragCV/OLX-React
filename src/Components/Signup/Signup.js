@@ -17,7 +17,7 @@ const {Firebase} = useContext(FireBaseContext)
   const handleSubmit = (e) => {
     e.preventDefault();
     Firebase.auth().createUserWithEmailAndPassword(email, password).then(res => {
-      res.user.updateProfile({displayname: username}).then(() => {
+      res.user.updateProfile({displayName: username}).then(() => {
         Firebase.firestore().collection('users').add({
           id: res.user.uid,
           username: username,
@@ -27,6 +27,11 @@ const {Firebase} = useContext(FireBaseContext)
         })
       })
     })
+  }
+
+  const loginPage = (e) => {
+    e.preventDefault();
+    history.push("/login")
   }
 
   return (
@@ -81,7 +86,7 @@ const {Firebase} = useContext(FireBaseContext)
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        <button onClick={loginPage}>Login</button>
       </div>
     </div>
   );
