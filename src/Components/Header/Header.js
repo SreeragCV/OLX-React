@@ -21,11 +21,20 @@ function Header() {
        history.push("/login")
     }
   
+    const handleCreate = (e) => {
+      e.preventDefault();
+       history.push("/create")
+    }
+    const handleHome = (e) => {
+      e.preventDefault();
+       history.push("/")
+    }
+  
 
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
-        <div className="brandName">
+        <div onClick={handleHome} className="brandName">
           <OlxLogo></OlxLogo>
         </div>
         <div className="placeSearch">
@@ -37,7 +46,7 @@ function Header() {
           <div className="input">
             <input
               type="text"
-              placeholder="Find car,mobile phone and more..."
+              placeholder="Find cars, mobile phones and more..."
             />
           </div>
           <div className="searchAction">
@@ -45,17 +54,18 @@ function Header() {
           </div>
         </div>
         <div className="language">
-          <span> ENGLISH </span>
-          <Arrow></Arrow>
+        <span>ENGLISH</span>
+          <Arrow>
+          </Arrow>
         </div>
         <div className="loginPage">
-          <span>{user ? `Welcome back ${user.displayName}` : <button onClick={handleSubmit}>Login</button>}</span>
+          <span>{user ? `${user.displayName}` : <button onClick={handleSubmit}>Login</button>}</span>
           <hr />
         </div>
         <div>
           {user && <button onClick={() => Firebase.auth().signOut()}>Logout</button>}
         </div>
-        <div className="sellMenu">
+        <div onClick={handleCreate} className="sellMenu">
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>

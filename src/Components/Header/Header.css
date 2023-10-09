@@ -6,8 +6,12 @@
   z-index: 999;
 }
 
+.brandName{
+  margin-left: 20px;
+}
+
 .headerChildDiv {
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,6 +123,7 @@
 .sellMenu {
   position: relative;
   cursor: pointer;
+  right: 15px;
 }
 
 .sellMenu .all {

@@ -1,11 +1,19 @@
+
 .bannerParentDiv {
   padding-top: 4em;
 }
+
+
+
 .bannerParentDiv .bannerChildDiv {
+
 }
+
 .bannerParentDiv .bannerChildDiv .menuBar {
   display: flex;
   padding: 10px 16px 10px 16px;
+  margin-left: 10px;
+  margin-top: 6px ;
 }
 
 .bannerParentDiv .bannerChildDiv .menuBar span {
@@ -20,14 +28,16 @@
 }
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
   padding: 10px;
+  font-size: 14px;
 }
 
 .bannerChildDiv .banner {
   position: relative;
   width: 100vw;
+  margin-left: 22px;
 }
 .bannerChildDiv .banner img{
-  width: 100vw;
+  width: 96vw;
 }
 
 @media only screen and (max-width: 700px) {

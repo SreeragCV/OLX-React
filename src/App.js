@@ -10,6 +10,7 @@ import LoginPage from './Pages/Login';
  */
 import Home from './Pages/Home';
 import { AuthContext, FireBaseContext } from './store/CreateContext';
+import Create from './Components/Create/Create';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
       </Route>
       <Route path="/login">
       <LoginPage />
+      </Route>
+      <Route path="/create">
+      <Create />
       </Route>
       </Router>
     </div>
