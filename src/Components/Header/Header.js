@@ -8,7 +8,7 @@ import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { AuthContext } from '../../store/CreateContext';
 import { Firebase } from '../../firebase/config';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory, Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Header() {
 
@@ -63,7 +63,7 @@ function Header() {
           <hr />
         </div>
         <div>
-          {user && <button onClick={() => Firebase.auth().signOut()}>Logout</button>}
+          {user && <Link style={{color: 'black', marginRight: '16px', fontSize:'17px', textDecoration:'underline' }} onClick={() => Firebase.auth().signOut()}>Logout</Link>}
         </div>
         <div onClick={handleCreate} className="sellMenu">
           <SellButton></SellButton>
