@@ -25,10 +25,14 @@
   display: flex;
 }
 
-.moreView .cards {
+.postParentDiv .moreView .cards{
   white-space: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y:hidden;
+}
+
+.cards::-webkit-scrollbar{
+  display: none;
 }
 
 .card {
@@ -85,3 +89,7 @@
   font-size: 24px;
   color: #002f34;
 }
+
+.postParentDiv{
+  
+  }
